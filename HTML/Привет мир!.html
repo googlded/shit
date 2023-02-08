@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" /> 
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/привет мир!.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <body>
+        <header class="header navbar-fixed-top">
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <div class="menu-container">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only"></span>
+                            <span class="toggle-icon"></span>
+                        </button>
+                        <div class="logo">
+                            <a class="logo-wrap" href="Главная.html">
+                                <div class="logo-tittle">JavaScript</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="navbar-nav navbar-nav-right">
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="Главная.html">Главная</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="Введение в JavaScript.html">Введение в JavaScript</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="Консоль-разработчика.html">Консоль-разработчика</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="Редакторы кода.html">Редакторы кода</a></li>
+                                <li class="nav-item"><a class="nav-item-child nav-item-hover" href="Привет мир!.html">Привет мир!</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="con">
+        <div class="box">
+          <h2>Привет, мир!</h2>
+          <p>В этой части учебника мы изучаем собственно JavaScript, сам язык.
+          </p>
+         <p>Но нам нужна рабочая среда для запуска наших скриптов, и, поскольку это онлайн-книга, то браузер будет хорошим выбором. В этой главе мы сократим количество специфичных для браузера команд (например, alert) до минимума, чтобы вы не тратили на них время, если планируете сосредоточиться на другой среде (например, Node.js). А на использовании JavaScript в браузере мы сосредоточимся в следующей части учебника.
+          </p>
+           <p>Итак, сначала давайте посмотрим, как выполнить скрипт на странице. Для серверных сред (например, Node.js), вы можете выполнить скрипт с помощью команды типа "node my.js". Для браузера всё немного иначе.
+         </p>
+     </div>
+     <div class="box">
+         <h2>Тег «script»</h2>
+         <p>Программы на JavaScript могут быть вставлены в любое место HTML-документа с помощью тега <code>«script»</code>.
+          </p>
+         <p>Для примера:</p>
+        </div>
+          <div class="box">
+              <img src="img/code.png">
+         </div>
+            <div class="box">
+            <p>Тег <code>«script»</code> содержит JavaScript-код, который автоматически выполнится, когда браузер его обработает.
+             </p>
+           </div>
+          <div class="box">
+               <h3>Современная разметка</h3>
+              <p>Тег <code>«script»</code> имеет несколько атрибутов, которые редко используются, но всё ещё могут встретиться в старом коде:
+               </p>
+               <p><span class="dd">Атрибут</span> <code>type: script type=...></code></p>
+         <p>Старый стандарт HTML, HTML4, требовал наличия этого атрибута в теге <code>«script»</code>. Обычно он имел значение <code>type="text/javascript"</code>. На текущий момент этого больше не требуется. Более того, в современном стандарте HTML смысл этого атрибута полностью изменился. Теперь он может использоваться для JavaScript-модулей. Но это тема не для начального уровня, и о ней мы поговорим в другой части учебника.
+         </p>
+         </div>
+         <div class="box">
+             <p>Атрибут <code>language:</code> <code>script language=…></code></p>
+               <p>Этот атрибут должен был задавать язык, на котором написан скрипт. Но так как JavaScript является языком по умолчанию, в этом атрибуте уже нет необходимости.
+             </p>
+          </div>
+              <div class="box">
+                  <h4>Обёртывание скрипта в HTML-комментарии.
+                  </h4>
+                   <p>В очень древних книгах и руководствах вы сможете найти комментарии внутри тега <code>«script»</code>, например, такие:</p>
+                 <img src="img/code2.png">
+              </div>
+                  <div class="box">
+                  <p>Этот комментарий скрывал код JavaScript в старых браузерах, которые не знали, как обрабатывать тег <code>«script»</code>. Поскольку все браузеры, выпущенные за последние 15 лет, не содержат данной проблемы, такие комментарии уже не нужны. Если они есть, то это признак, что перед нами очень древний код.
+                </p>
+          </div>
+        <div class="box">
+            <h3>Внешние скрипты</h3>
+            <p>Если у вас много JavaScript-кода, вы можете поместить его в отдельный файл.</p>
+            <p>Файл скрипта можно подключить к HTML с помощью атрибута <code>src:</code></p>
+            <img src="img/code3.png">
+        </div>
+        <div class="box">
+            <p>Здесь <code>/path/to/script.js</code> – это абсолютный путь до скрипта от корня сайта. Также можно указать относительный путь от текущей страницы. Например, <code>src="script.js"</code> или <code>src="./script.js"</code> будет означать, что файл <code>"script.js"</code> находится в текущей папке.
+            </p>
+            <p>Можно указать и полный URL-адрес. Например:</p>
+            <img src="img/code4.png">
+        </div>
+        <div class="box">
+            <p>Для подключения нескольких скриптов используйте несколько тегов:</p>
+            <img src="img/code5.png">
+        </div>
+        <div class="box">
+            <h3>Итого</h3>
+            <li>Для добавления кода JavaScript на страницу используется тег <code>«script»</code>
+            </li>
+            <li>Атрибуты <code>type</code> и <code>language</code> необязательны.
+            </li>
+            <li>Скрипт во внешнем файле можно вставить с помощью <code>«script src="path/to/script.js"»«/script»</code>.
+            </li>
+        </div>
+        <div class="box">
+            <p>Нам ещё многое предстоит изучить про браузерные скрипты и их взаимодействие со страницей. Но, как уже было сказано, эта часть учебника посвящена именно языку JavaScript, поэтому здесь мы постараемся не отвлекаться на детали реализации в браузере. Мы воспользуемся браузером для запуска JavaScript, это удобно для онлайн-демонстраций, но это только одна из платформ, на которых работает этот язык.</p>
+        </div>
+        </div>
+        <div class="box">
+            <h3>Задание</h3>
+        <div class="line"></div>
+        <div class="box"></div>
+            <h3>Вызвать alert</h3>
+            <p>Выполните это задание в песочнице.</p>
+            <a class="vkp" href="https://ru.js.cx/task/hello-alert/solution/">Демо в новом окне</a>
+            <div class="box">
+            <a class="button" href="https://plnkr.co/edit/VJWJ5AN62rVfGUds?p=preview&preview">Решение</a>
+            </div>
+            <div class="box"></div>
+            <div class="line"></div>
+            <footer class="footer"> </footer>
+    </body>
+    <a href="javascript:void(0);" class="js-back-to-top back-to-top"></a>
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/layout.js" type="text/javascript"></script>
+</html>
